@@ -23,8 +23,8 @@ class Board{
 		char[] Id = {'A','B','C','D','P'};
 		int[] size_ship={5,4,3,3,2};
 		
-	Board(int row,int column){//Pass the object of game class and initialize board_array 2-D matrix
-		board_array = new char[row][column];
+	Board(){//Pass the object of game class and initialize board_array 2-D matrix
+		board_array = new char[10][10];
 
 		for(int i=0; i<row; i++)   //replace inside constructor's definition with new initialization via Game class object
 		{
@@ -33,12 +33,6 @@ class Board{
 				board_array[i][j] = '.';
 			}
 		}
-		board_array[2][3] = 'X';
-		board_array[2][4] = 'X';
-		board_array[2][5] = 'X';
-		board_array[2][6] = 'A';
-		board_array[2][7] = 'A';
-		
 		}
 	void display(boolean shotsOnly)
 	{
